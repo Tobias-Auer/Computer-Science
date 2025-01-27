@@ -1,6 +1,6 @@
 # Aufbau und Funktionsweise einer Minecraft-ALU
 
-![ALU](https://t-auer.com/images/alu.png)
+![ALU](bilder/alu.png)
 
 Eine **Arithmetic Logic Unit (ALU)** ist ein zentraler Bestandteil von Prozessoren (CPUs). Sie übernimmt arithmetische und logische Berechnungen, die für die Ausführung von Programmen notwendig sind. In Minecraft habe ich eine 8-Bit ALU nachgebaut, die verschiedene Operationen unterstützt, darunter Addition, Subtraktion, Inkrementierung, Dekrementierung und Logikoperationen. Im Folgenden erläutere ich den Aufbau und die Funktionsweise der ALU und erkläre die Logik hinter den einzelnen Komponenten anhand der Minecraft-Konstruktion. Alle technischen Details werden durch Bilder und Diagramme unterstützt.
 
@@ -8,7 +8,7 @@ Eine **Arithmetic Logic Unit (ALU)** ist ein zentraler Bestandteil von Prozessor
 
 ## **1. Überblick über die ALU**
 
-![Überblick](https://t-auer.com/images/Pasted%20image%2020250127195824.png)
+![Überblick](bilder/Pasted%20image%2020250127195824.png)
 
 Die ALU ist in mehrere Module unterteilt, die jeweils bestimmte Funktionen übernehmen. Jedes Modul basiert auf logischen Schaltungen, die mit Minecraft-Redstone und Schaltern umgesetzt wurden. 
 
@@ -18,10 +18,10 @@ Die ALU ist in mehrere Module unterteilt, die jeweils bestimmte Funktionen über
 - **Steuerung über Opcode**: Die ALU verwendet ein 2-Bit-Steuersignal (Opcode), um die gewünschte Operation auszuwählen.
 
 Ein schematischer Überblick über die Logik der ALU:  
-![ALU Design](https://t-auer.com/images/alu-design.png)  
+![ALU Design](bilder/alu-design.png)  
 
 Das Layout der gesamten ALU als Schaltplan:  
-![ALU Layout](https://t-auer.com/images/fulldesign-layout.png)  
+![ALU Layout](bilder/fulldesign-layout.png)  
 
 ---
 
@@ -36,13 +36,13 @@ Die ALU besteht aus mehreren Hauptkomponenten, die im Folgenden einzeln erläute
 Der **Adder** ist eines der zentralen Module der ALU. Er dient dazu, zwei 8-Bit-Zahlen zu addieren. Dabei wird das Ergebnis sowie ein Übertragsbit (Carry-Out) ausgegeben, falls die Addition überläuft.
 
 - **Minecraft-Nachbau des Adders**  
-  ![8-Bit Adder](https://t-auer.com/images/8-bit-adder.png)  
+  ![8-Bit Adder](bilder/8-bit-adder.png)  
 
 - **Schematische Darstellung der Verbindungen**  
-  ![8-Bit Adder Schema](https://t-auer.com/images/8-bit-adder-scem.png)  
+  ![8-Bit Adder Schema](bilder/8-bit-adder-scem.png)  
 
 - **Logik des Adders als vereinfachter Schaltplan**  
-  ![8-Bit Adder Design](https://t-auer.com/images/8-bit-adder-design.png)  
+  ![8-Bit Adder Design](bilder/8-bit-adder-design.png)  
 
 Ein 8-Bit Adder besteht aus 8 **Full Adders**, die in einer Kette verbunden sind. Jeder Full Adder übernimmt die Addition eines Bit-Paares der Eingabewerte sowie eines Carry-In-Bits.
 
@@ -54,13 +54,13 @@ Ein einzelner Full Adder basiert auf grundlegenden Logikgattern:
 - **OR-Gatter**: Um den endgültigen Übertrag zu bestimmen.
 
 Die Logik eines Full Adders ist im folgenden Diagramm dargestellt:  
-![Full Adder Design](https://t-auer.com/images/full-adder-design.png)
+![Full Adder Design](bilder/full-adder-design.png)
 
 In Minecraft umgesetzt sieht der Full Adder wie folgt aus:  
 - Physischer Aufbau:  
-  ![Full Adder](https://t-auer.com/images/full-adder.png)  
+  ![Full Adder](bilder/full-adder.png)  
 - Schematische Ansicht:  
-  ![Full Adder Schema](https://t-auer.com/images/full-adder-scem.png)  
+  ![Full Adder Schema](bilder/full-adder-scem.png)  
 
 ---
 
@@ -69,13 +69,13 @@ In Minecraft umgesetzt sieht der Full Adder wie folgt aus:
 Der **Subtractor** ist für die Subtraktion zweier 8-Bit-Zahlen verantwortlich. Anstelle eines Übertragsbits (Carry-Out) arbeitet er mit einem **Borrow-Bit**, das angibt, ob beim Subtrahieren ein "Ausleihen" notwendig war.
 
 - **Minecraft-Nachbau des Subtractors**  
-  ![8-Bit Subtractor](https://t-auer.com/images/8-bit-subtractor.png)  
+  ![8-Bit Subtractor](bilder/8-bit-subtractor.png)  
 
 - **Logik des Subtractors**  
-  ![8-Bit Subtractor Design](https://t-auer.com/images/8-bit-subtractor-design.png)  
+  ![8-Bit Subtractor Design](bilder/8-bit-subtractor-design.png)  
 
 - **Schematische Übersicht der Verbindungen**  
-  ![8-Bit Subtractor Schema](https://t-auer.com/images/8-bit-subtractor-scem.png)  
+  ![8-Bit Subtractor Schema](bilder/8-bit-subtractor-scem.png)  
 
 Wie der Adder besteht der Subtractor aus 8 **Full Subtractors**, die in einer Kette miteinander verbunden sind. 
 
