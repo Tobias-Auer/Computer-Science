@@ -139,7 +139,7 @@ Der Decoder wandelt eine 2-Bit-Eingabe in eine spezifische Ausgabe um, bei der n
 - Minecraft-Nachbau:  
   ![2-Bit Decoder](bilder/2-bit-decoder.png)  
 - Schematische Darstellung:  
-  ![Binary Decoder Design](bilder/binary-decoder-design%201.png)  
+  ![Binary Decoder Design](bilder/binary-decoder-design.png)  
 
 ---
 
