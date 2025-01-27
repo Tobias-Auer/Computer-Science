@@ -1,6 +1,6 @@
 # Aufbau und Funktionsweise einer Minecraft-ALU
 
-![[alu.png]]
+![[bilder/alu.png]]
 
 Eine **Arithmetic Logic Unit (ALU)** ist ein zentraler Bestandteil von CPUs, die arithmetische und logische Operationen durchführt. In Minecraft habe ich eine 8-Bit ALU nachgebaut, die mehrere grundlegende Operationen unterstützt, darunter Addition, Subtraktion, Inkrementierung, Dekrementierung und Logikoperationen. Hier erkläre ich den Aufbau, die Funktionsweise und stelle die Logik hinter den Komponenten vor – unterstützt durch die Bilder meiner Konstruktion.
 
@@ -8,7 +8,7 @@ Eine **Arithmetic Logic Unit (ALU)** ist ein zentraler Bestandteil von CPUs, die
 
 ## **1. Überblick über die ALU**
 
-![[Pasted image 20250127195824.png]]
+![[bilder/Pasted image 20250127195824.png]]
 
 Die ALU in Minecraft setzt sich aus mehreren logischen und arithmetischen Modulen zusammen. 
 
@@ -40,12 +40,12 @@ Anhand des oberen Bildes sehen wir, dass ein 8-Bit Adder aus 8 Full Addern beste
 #### 2.1.1 Der Full Adder als einzelne Komponente
 
 Ein einzelner Full Adder ist im folgendem Diagramm, mithilfe von Logikgattern, dargestellt:
-![[full-adder-design.png]]
+![[bilder/full-adder-design.png]]
 
 Er besteht aus zwei and-gates, zwei xor-gates und einem or-gate.
 In Minecraft sieht es folgendermaßen aus:
 
-![[full-adder-scem.png]] ![[full-adder.png]]
+![[bilder/full-adder-scem.png]] ![[bilder/full-adder.png]]
 
 
 
@@ -66,12 +66,12 @@ Die schematische Übersicht der Verbindungen:
 Anhand des oberen Bildes sehen wir, dass ein 8-Bit Subtractor aus 8 Full Subtrators besteht. Ein einzelner Full Subtractor sieht wie folgt aus:
 #### 2.2.1 Der Full Subtractor als einzelne Komponente
 
-![[full-subtractor-design.png]]
+![[bilder/full-subtractor-design.png]]
 
 Er besteht, wie auch der Full Adder, aus zwei and-gates, zwei xor-gates und einem or-gate. Jedoch kommen hier noch zwei not-gates hinzu.
 In Minecraft sieht es folgendermaßen aus:
 
-![[full-subtractor-scem.png]] ![[full-subtractor.png]]
+![[bilder/full-subtractor-scem.png]] ![[bilder/full-subtractor.png]]
 
 
 ---
@@ -94,17 +94,17 @@ Man kann erkennen, dass jeweils sieben mal das gleiche Bauteil verwandt wurde, s
 #### 2.3.1 Half Adder und Half Subtractor
 
 Der Aufbau für den Half Adder ist folgender:
-![[half-adder-design.png]]
+![[bilder/half-adder-design.png]]
 
 In Minecraft umgesetzt sieht es folgender Maßen aus:
-![[half-adder-scem.png]] ![[half-adder.png]]
+![[bilder/half-adder-scem.png]] ![[bilder/half-adder.png]]
 
 
 Der Half Subtractor sieht fast so ähnlich aus, hat jedoch noch ein zusätzliches not-gate:
-![[Pasted image 20250127202403.png]]
+![[bilder/Pasted image 20250127202403.png]]
 
 In Minecraft umgesetzt sieht es wie folgt aus:
- ![[half-subtractor-scem.png]] ![[half-subtractor.png]]
+ ![[bilder/half-subtractor-scem.png]] ![[bilder/half-subtractor.png]]
 
 ---
 
@@ -117,7 +117,7 @@ Minecraft-Nachbau des Decoders:
 ![2-Bit Decoder](2-bit-decoder.png)  
 
 Schematische Darstellung in:  
-![[binary-decoder-design 1.png]]
+![[bilder/binary-decoder-design 1.png]]
 
 ---
 
