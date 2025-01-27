@@ -1,6 +1,6 @@
 # Aufbau und Funktionsweise einer Minecraft-ALU
 
-![[bilder/alu.png]]
+![ALU](https://t-auer.com/images/alu.png)
 
 Eine **Arithmetic Logic Unit (ALU)** ist ein zentraler Bestandteil von Prozessoren (CPUs). Sie übernimmt arithmetische und logische Berechnungen, die für die Ausführung von Programmen notwendig sind. In Minecraft habe ich eine 8-Bit ALU nachgebaut, die verschiedene Operationen unterstützt, darunter Addition, Subtraktion, Inkrementierung, Dekrementierung und Logikoperationen. Im Folgenden erläutere ich den Aufbau und die Funktionsweise der ALU und erkläre die Logik hinter den einzelnen Komponenten anhand der Minecraft-Konstruktion. Alle technischen Details werden durch Bilder und Diagramme unterstützt.
 
@@ -8,7 +8,7 @@ Eine **Arithmetic Logic Unit (ALU)** ist ein zentraler Bestandteil von Prozessor
 
 ## **1. Überblick über die ALU**
 
-![[bilder/Pasted image 20250127195824.png]]
+![Überblick](https://t-auer.com/images/Pasted%20image%2020250127195824.png)
 
 Die ALU ist in mehrere Module unterteilt, die jeweils bestimmte Funktionen übernehmen. Jedes Modul basiert auf logischen Schaltungen, die mit Minecraft-Redstone und Schaltern umgesetzt wurden. 
 
@@ -18,10 +18,10 @@ Die ALU ist in mehrere Module unterteilt, die jeweils bestimmte Funktionen über
 - **Steuerung über Opcode**: Die ALU verwendet ein 2-Bit-Steuersignal (Opcode), um die gewünschte Operation auszuwählen.
 
 Ein schematischer Überblick über die Logik der ALU:  
-![ALU Design](alu-design.png)  
+![ALU Design](https://t-auer.com/images/alu-design.png)  
 
 Das Layout der gesamten ALU als Schaltplan:  
-![ALU Layout](fulldesign-layout.png)  
+![ALU Layout](https://t-auer.com/images/fulldesign-layout.png)  
 
 ---
 
@@ -36,13 +36,13 @@ Die ALU besteht aus mehreren Hauptkomponenten, die im Folgenden einzeln erläute
 Der **Adder** ist eines der zentralen Module der ALU. Er dient dazu, zwei 8-Bit-Zahlen zu addieren. Dabei wird das Ergebnis sowie ein Übertragsbit (Carry-Out) ausgegeben, falls die Addition überläuft.
 
 - **Minecraft-Nachbau des Adders**  
-  ![8-Bit Adder](8-bit-adder.png)  
+  ![8-Bit Adder](https://t-auer.com/images/8-bit-adder.png)  
 
 - **Schematische Darstellung der Verbindungen**  
-  ![8-Bit Adder Schema](8-bit-adder-scem.png)  
+  ![8-Bit Adder Schema](https://t-auer.com/images/8-bit-adder-scem.png)  
 
 - **Logik des Adders als vereinfachter Schaltplan**  
-  ![8-Bit Adder Design](8-bit-adder-design.png)  
+  ![8-Bit Adder Design](https://t-auer.com/images/8-bit-adder-design.png)  
 
 Ein 8-Bit Adder besteht aus 8 **Full Adders**, die in einer Kette verbunden sind. Jeder Full Adder übernimmt die Addition eines Bit-Paares der Eingabewerte sowie eines Carry-In-Bits.
 
@@ -54,13 +54,13 @@ Ein einzelner Full Adder basiert auf grundlegenden Logikgattern:
 - **OR-Gatter**: Um den endgültigen Übertrag zu bestimmen.
 
 Die Logik eines Full Adders ist im folgenden Diagramm dargestellt:  
-![[bilder/full-adder-design.png]]
+![Full Adder Design](https://t-auer.com/images/full-adder-design.png)
 
 In Minecraft umgesetzt sieht der Full Adder wie folgt aus:  
 - Physischer Aufbau:  
-  ![[bilder/full-adder.png]]  
+  ![Full Adder](https://t-auer.com/images/full-adder.png)  
 - Schematische Ansicht:  
-  ![[bilder/full-adder-scem.png]]  
+  ![Full Adder Schema](https://t-auer.com/images/full-adder-scem.png)  
 
 ---
 
@@ -69,13 +69,13 @@ In Minecraft umgesetzt sieht der Full Adder wie folgt aus:
 Der **Subtractor** ist für die Subtraktion zweier 8-Bit-Zahlen verantwortlich. Anstelle eines Übertragsbits (Carry-Out) arbeitet er mit einem **Borrow-Bit**, das angibt, ob beim Subtrahieren ein "Ausleihen" notwendig war.
 
 - **Minecraft-Nachbau des Subtractors**  
-  ![8-Bit Subtractor](8-bit-subtractor.png)  
+  ![8-Bit Subtractor](https://t-auer.com/images/8-bit-subtractor.png)  
 
 - **Logik des Subtractors**  
-  ![8-Bit Subtractor Design](8-bit-subtractor-design.png)  
+  ![8-Bit Subtractor Design](https://t-auer.com/images/8-bit-subtractor-design.png)  
 
 - **Schematische Übersicht der Verbindungen**  
-  ![8-Bit Subtractor Schema](8-bit-subtractor-scem.png)  
+  ![8-Bit Subtractor Schema](https://t-auer.com/images/8-bit-subtractor-scem.png)  
 
 Wie der Adder besteht der Subtractor aus 8 **Full Subtractors**, die in einer Kette miteinander verbunden sind. 
 
@@ -84,13 +84,13 @@ Wie der Adder besteht der Subtractor aus 8 **Full Subtractors**, die in einer Ke
 Ein Full Subtractor ähnelt in seiner Struktur dem Full Adder, enthält jedoch zusätzliche **NOT-Gatter**, um die Negation eines Bits zu ermöglichen. 
 
 - Logikdiagramm des Full Subtractors:  
-  ![[bilder/full-subtractor-design.png]]
+  ![Full Subtractor Design](bilder/full-subtractor-design.png)
 
 - Minecraft-Nachbau:  
   - Physischer Aufbau:  
-    ![[bilder/full-subtractor.png]]  
+    ![Full Subtractor](bilder/full-subtractor.png)  
   - Schematische Ansicht:  
-    ![[bilder/full-subtractor-scem.png]]  
+    ![Full Subtractor Schema](bilder/full-subtractor-scem.png)  
 
 ---
 
@@ -100,15 +100,15 @@ Der **Incrementer** erhöht den Wert einer 8-Bit-Zahl um 1, während der **Decre
 
 #### **Incrementer**
 - Physischer Aufbau:  
-  ![8-Bit Incrementer](8-bit-incrementer.png)  
+  ![8-Bit Incrementer](bilder/8-bit-incrementer.png)  
 - Schematische Ansicht:  
-  ![8-Bit Incrementer Schema](8-bit-incrementer-scem.png)  
+  ![8-Bit Incrementer Schema](bilder/8-bit-incrementer-scem.png)  
 
 #### **Decrementer**
 - Physischer Aufbau:  
-  ![8-Bit Decrementer](8-bit-decrementer.png)  
+  ![8-Bit Decrementer](bilder/8-bit-decrementer.png)  
 - Schematische Ansicht:  
-  ![8-Bit Decrementer Schema](8-bit-decrementer-scem.png)  
+  ![8-Bit Decrementer Schema](bilder/8-bit-decrementer-scem.png)  
 
 Der Aufbau basiert auf den sogenannten **Half Adders** und **Half Subtractors**, die jeweils nur zwei Inputs verarbeiten können.
 
@@ -116,17 +116,17 @@ Der Aufbau basiert auf den sogenannten **Half Adders** und **Half Subtractors**,
 
 - **Half Adder**
   - Logikdiagramm:  
-    ![[bilder/half-adder-design.png]]  
+    ![Half Adder Design](bilder/half-adder-design.png)  
   - Minecraft-Umsetzung:  
-    ![[bilder/half-adder.png]]  
-    ![[bilder/half-adder-scem.png]]  
+    ![Half Adder](bilder/half-adder.png)  
+    ![Half Adder Schema](bilder/half-adder-scem.png)  
 
 - **Half Subtractor**
   - Logikdiagramm:  
-    ![[bilder/Pasted image 20250127202403.png]]  
+    ![Half Subtractor Design](bilder/Pasted%20image%2020250127202403.png)  
   - Minecraft-Umsetzung:  
-    ![[bilder/half-subtractor.png]]  
-    ![[bilder/half-subtractor-scem.png]]  
+    ![Half Subtractor](bilder/half-subtractor.png)  
+    ![Half Subtractor Schema](bilder/half-subtractor-scem.png)  
 
 ---
 
@@ -137,9 +137,9 @@ Der Aufbau basiert auf den sogenannten **Half Adders** und **Half Subtractors**,
 Der Decoder wandelt eine 2-Bit-Eingabe in eine spezifische Ausgabe um, bei der nur ein Ausgang aktiviert wird. Dies ist entscheidend für die Auswahl der einzelnen ALU-Operationen.
 
 - Minecraft-Nachbau:  
-  ![2-Bit Decoder](2-bit-decoder.png)  
+  ![2-Bit Decoder](bilder/2-bit-decoder.png)  
 - Schematische Darstellung:  
-  ![[bilder/binary-decoder-design 1.png]]  
+  ![Binary Decoder Design](bilder/binary-decoder-design%201.png)  
 
 ---
 
@@ -152,7 +152,7 @@ Logikgatter sind die grundlegenden Bausteine der ALU. Sie ermöglichen Operation
 - **XOR**: Liefert TRUE, wenn genau ein Eingang TRUE ist.
 
 - Schaltplan der Logikgatter:  
-  ![Logikgatter Schema](gates.png)  
+  ![Logikgatter Schema](bilder/gates.png)  
 
 ---
 
@@ -161,22 +161,21 @@ Logikgatter sind die grundlegenden Bausteine der ALU. Sie ermöglichen Operation
 Die ALU wird mithilfe eines 2-Bit-Opcodes gesteuert, der bestimmt, welche Operation ausgeführt werden soll.
 
 - **Erstes Bit (Linke Operation)**  
-  ![Operator Links](op-left.png)  
+  ![Operator Links](bilder/op-left.png)  
 - **Zweites Bit (Rechte Operation)**  
-  ![Operator Rechts](op-right.png)  
+  ![Operator Rechts](bilder/op-right.png)  
 
 Die Kombination der Opcodes aktiviert bestimmte Module der ALU über UND-Gatter:  
 - Aufbau:  
-  ![Operator Gates](op-gates.png)  
+  ![Operator Gates](bilder/op-gates.png)  
 - Schema:  
-  ![Operator Gates Schema](op-gates-scem.png)  
+  ![Operator Gates Schema](bilder/op-gates-scem.png)  
 
 ---
 
 ## **5. Gesamtübersicht**
 
 Zum Abschluss ein Überblick über die gesamte ALU:  
-![Deckblatt Design](full-design-cover.png)  
+![Deckblatt Design](bilder/full-design-cover.png)  
 
 Die Umsetzung in Minecraft zeigt, dass auch komplexe Rechenoperationen mit Redstone möglich sind. Jede Komponente basiert auf den Grundlagen der Digitaltechnik und wurde entsprechend umgesetzt.
-
