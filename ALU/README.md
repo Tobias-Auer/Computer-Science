@@ -175,7 +175,7 @@ Die Kombination der Opcodes aktiviert bestimmte Module der ALU über UND-Gatter:
 
 ## **5. Gesamtübersicht**
 
-Zum Abschluss ein Überblick über die gesamte ALU:  
+Zum Abschluss ein Überblick über die gesamte ALU:   
 ![Deckblatt Design](bilder/full-design-cover.png)  
 
 Die Umsetzung in Minecraft zeigt, dass auch komplexe Rechenoperationen mit Redstone möglich sind. Jede Komponente basiert auf den Grundlagen der Digitaltechnik und wurde entsprechend umgesetzt.
